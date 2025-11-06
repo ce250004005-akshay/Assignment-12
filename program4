@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Box{
+private:
+    float length;
+    float breadth;
+    float height;
+public:
+    Box(){
+        length=1;
+        breadth=1;
+        height=1;
+    }
+    Box(int l){
+        length=l;
+        breadth=1;
+        height=1;
+        
+    }
+    Box(int l, int b, int h){
+        length=l;
+        breadth=b;
+        height=h;
+    } 
+    void displayvolume(){
+        float vol= length*breadth*height;
+        cout<<"The volume of the cuboid with length,breadth and height respectively "<<length<<" "<<breadth<<" "<<height<<" is "<<vol<<endl;
+    }
+    };
+int main(){
+    Box box1;
+    Box box2(5);
+    Box box3(5,4,3);
+    box1.displayvolume();
+    box2.displayvolume();
+    box3.displayvolume();
+}
