@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    int length;
+    int breadth;
+
+public:
+    Rectangle() {
+        length = 1;
+        breadth = 1;
+    }
+
+    
+    Rectangle(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    
+    int calculateArea() {
+        return length * breadth;
+    }
+
+    
+    void displayArea() {
+        int area = calculateArea();
+        cout << "Area of rectangle with length " << length << " and breadth " << breadth << " is: " << area << endl;
+    }
+};
+
+int main() {
+    
+    Rectangle rect1;
+    Rectangle rect2(5, 3);
+    rect1.displayArea();
+    rect2.displayArea();
+
+    return 0;
+}
